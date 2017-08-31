@@ -11,7 +11,9 @@ public enum AccessFlag {
     Synchronized(0x0020),
     Super(0x0020), // No Effect
     Bridge(0x0040),
+    Volatile(0x0040),
     Vararges(0x0080),
+    Transient(0x0080),
     Native(0x0100),
     Interface(0x0200),
     Abstract(0x0400),
@@ -36,4 +38,9 @@ public enum AccessFlag {
     public static EnumSet<AccessFlag> getMethodAccessFlags() {
         return EnumSet.of(Public, Private, Protected, Static, Final, Synchronized, Bridge, Vararges, Native, Abstract, Strict, Synthetic);
     }
+
+    public static EnumSet<AccessFlag> getFieldAccessFlags() {
+        return EnumSet.of(Public, Private, Protected, Static, Final, Synchronized, Volatile, Transient, Synthetic, Enum);
+    }
+
 }

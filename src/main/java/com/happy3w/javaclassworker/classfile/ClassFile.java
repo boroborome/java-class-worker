@@ -1,10 +1,15 @@
 package com.happy3w.javaclassworker.classfile;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
+@Getter
+@Setter
 public class ClassFile {
 
     @Size(4)
