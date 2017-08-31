@@ -1,4 +1,4 @@
-package com.happy3w.jcw.javaclassworker;
+package com.happy3w.javaclassworker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
