@@ -1,6 +1,7 @@
 package com.happy3w.javaclassworker.classfile;
 
 
+import com.happy3w.javaclassworker.classfile.attribute.AbstractAttribute;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,6 +39,6 @@ public class ClassFile {
 
     private List<MethodInfo> methodInfos = new ArrayList<>();
 
-    private List<AtrributeInfo> atrributeInfos = new ArrayList<>();
+    private List<AbstractAttribute> atrributeInfos = new ArrayList<>();
 
 }

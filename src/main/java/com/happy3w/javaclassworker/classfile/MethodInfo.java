@@ -1,5 +1,6 @@
 package com.happy3w.javaclassworker.classfile;
 
+import com.happy3w.javaclassworker.classfile.attribute.AbstractAttribute;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,5 +19,5 @@ public class MethodInfo {
     @Size(2)
     private int descriptorIndex;
 
-    private List<AtrributeInfo> atrributes;
+    private List<AbstractAttribute> atrributes;
 }

@@ -1,15 +1,15 @@
-package com.happy3w.javaclassworker.classfile.constant;
+package com.happy3w.javaclassworker.classfile.attribute;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class ConstantCenter {
-    private List<ConstantTypeInfo> typeInfoList;
-    private Map<Integer, ConstantTypeInfo> typeInfoMap;
+public class AttributeCenter {
+    private List<AttributeTypeInfo> typeInfoList;
+    private Map<String, AttributeTypeInfo> typeInfoMap;
 
-    public void init(List<ConstantTypeInfo> constantTypeInfoList) {
+    public void init(List<AttributeTypeInfo> constantTypeInfoList) {
         this.typeInfoList = constantTypeInfoList;
         this.typeInfoMap = constantTypeInfoList
                 .stream()
@@ -18,8 +18,8 @@ public class ConstantCenter {
                                 i->i,
                                 (k1,k2)->k2));
     }
-    public Optional<ConstantTypeInfo> findOneByCode(int code) {
-        ConstantTypeInfo info = typeInfoMap.get(code);
+    public Optional<AttributeTypeInfo> findOneByCode(String code) {
+        AttributeTypeInfo info = typeInfoMap.get(code);
         return info == null ? Optional.empty() : Optional.of(info);
     }
 }
