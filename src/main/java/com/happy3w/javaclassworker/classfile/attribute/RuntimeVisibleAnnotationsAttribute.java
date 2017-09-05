@@ -11,5 +11,5 @@ import java.util.List;
 @Getter
 @Setter
 public class RuntimeVisibleAnnotationsAttribute extends AbstractAttribute {
-    private List<RunTimeVisibleAnnotationItem> annotations;
+    private List<RuntimeAnnotationItem> annotations;
 }
