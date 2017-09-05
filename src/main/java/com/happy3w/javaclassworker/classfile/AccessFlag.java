@@ -43,4 +43,7 @@ public enum AccessFlag {
         return EnumSet.of(Public, Private, Protected, Static, Final, Synchronized, Volatile, Transient, Synthetic, Enum);
     }
 
+    public static EnumSet<AccessFlag> getInnerClassAccessFlags() {
+        return EnumSet.of(Public, Private, Protected, Static, Final, Interface, Abstract, Synthetic, Annotation, Enum);
+    }
 }

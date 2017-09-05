@@ -8,4 +8,5 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SourceDebugExtensionAttribute extends AbstractAttribute {
+    private byte[] debugExtension;
 }

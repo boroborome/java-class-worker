@@ -9,4 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SyntheticAttribute extends AbstractAttribute {
+    public SyntheticAttribute() {
+        this.setAttributeLength(0);
+    }
 }

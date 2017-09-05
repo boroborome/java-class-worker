@@ -9,4 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DeprecatedAttribute extends AbstractAttribute {
+    public DeprecatedAttribute() {
+        this.setAttributeLength(0);
+    }
 }
