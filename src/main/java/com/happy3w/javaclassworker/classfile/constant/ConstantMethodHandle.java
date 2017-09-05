@@ -4,10 +4,12 @@ import com.happy3w.javaclassworker.classfile.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@ConstantDefine(code=15, name = "MethodHandle")
+@ConstantDefine(code = ConstantMethodHandle.Code, name = "MethodHandle")
 @Getter
 @Setter
 public class ConstantMethodHandle extends AbstractConstant{
+    public static final int Code = 15;
+
     @Size(1)
     private int referenceKind;
 

@@ -8,7 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ConstantInteger extends AbstractConstant{
-
     public static final int Code = 3;
 
     @Size(4)
