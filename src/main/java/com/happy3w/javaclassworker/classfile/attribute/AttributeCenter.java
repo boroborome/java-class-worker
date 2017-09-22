@@ -1,25 +1,12 @@
 package com.happy3w.javaclassworker.classfile.attribute;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import com.happy3w.javaclassworker.classfile.util.ValueCenter;
+import org.springframework.stereotype.Component;
 
-public class AttributeCenter {
-    private List<AttributeTypeInfo> typeInfoList;
-    private Map<String, AttributeTypeInfo> typeInfoMap;
+@Component
+public class AttributeCenter extends ValueCenter<AttributeDefine, AbstractAttribute, String> {
 
-    public void init(List<AttributeTypeInfo> constantTypeInfoList) {
-        this.typeInfoList = constantTypeInfoList;
-        this.typeInfoMap = constantTypeInfoList
-                .stream()
-                .collect(Collectors
-                        .toMap(i->i.getDefine().code(),
-                                i->i,
-                                (k1,k2)->k2));
-    }
-    public Optional<AttributeTypeInfo> findOneByCode(String code) {
-        AttributeTypeInfo info = typeInfoMap.get(code);
-        return info == null ? Optional.empty() : Optional.of(info);
+    public AttributeCenter() {
+        super(i->i.getDefine().code());
     }
 }
